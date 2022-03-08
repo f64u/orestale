@@ -29,8 +29,19 @@ function FruitGameRunning(){
 		spawn_timer--;
 		if(spawn_timer % FRAME_RATE == 0) {
 			seconds *= offSet;
+			fallSpeed *= 1 + offSet;
 		}
 	}
+	
+	if(timeTimer <= 0) {
+		timeTimer = room_speed;
+	} else {
+		timeTimer--;
+		if(timeTimer % FRAME_RATE == 0) {
+			time--;
+		}
+	}
+		
 
 	if(goodStuff) {
 		thescore += 1;
@@ -38,9 +49,8 @@ function FruitGameRunning(){
 	}
 
 	if(badStuff) {
-		thescore -= 1;
 		nbadStuff += 1;
-		badStuff = 0;
+		badStuff = false;
 	}
 
 	with(obj_fruit_score) {
@@ -48,8 +58,12 @@ function FruitGameRunning(){
 		nbadStuff = other.nbadStuff;
 	}
 	
+	with(obj_fruit_timer) {
+		time = other.time;
+	}
+	
 	with(obj_falling_object) {
-		y += 2;
+		y += other.fallSpeed;
 
 		if(y >= RESOLUTION_H) {
 			instance_destroy();
@@ -57,22 +71,45 @@ function FruitGameRunning(){
 
 	}
 	
+	if(thescore >= 5) {
+		state = FruitGameWon;
+	}
+	
 
 
 	if(nbadStuff == 3) {
 		state = FruitGameLost;
+		lostText = "You're bad at sorting.";
+	}
+	
+	if(time <= 0) {
+		state = FruitGameLost;
+		lostText = "You sort slow."
 	}
 }
 
 function FruitGamePaused() {
-	if(!instance_exists(obj_text)) {
+	if(!instance_exists(obj_text) && !instance_exists(obj_text_queued)) {
 		state = FruitGameRunning;
 	}
 }
 
 function FruitGameLost() {
-	NewTextBox(RESOLUTION_H, "You lose!", [-1]);
+	if(!saidGameLostStuff) {
+		saidGameLostStuff = true;
+		NewTextBox(RESOLUTION_H, lostText, [-1], spr_fruit_vender_portrait);
+	}
 	if(!instance_exists(obj_text) && !instance_exists(obj_warp)) {
+		WarpPlayerTo(room_marketplace, 434, 160, 1);
+	}
+}
+
+function FruitGameWon() {
+	if(!saidGameLostStuff) {
+		saidGameWonStuff = true;
+		global.justWonFruitMinigame = true;
+	}
+	if(!instance_exists(obj_warp)) {
 		WarpPlayerTo(room_marketplace, 434, 160, 1);
 	}
 }

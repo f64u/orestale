@@ -57,5 +57,10 @@ function PlayerStateFree(){
 		}
 		
 	}
+	
+	if(global.justWonFruitMinigame && !instance_exists(obj_warp)) {
+		global.justWonFruitMinigame = false;
+		CueWonFruitMinigameDialogue();
+	}
 
 }

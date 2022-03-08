@@ -6,8 +6,8 @@ function DialogueResponses(response){
 		case 1: NewTextBox(RESOLUTION_H, "You don't care huh?", [-1]); break;
 		case 2: NewTextBox(RESOLUTION_H, "How?", ["3\\Look around.", "0\\Idk. you tell me."]); break;
 		case 3: NewTextBox(RESOLUTION_H, "Will do.", [-1]); break;
-		case 6: NewTextBox(RESOLUTION_H, "I understand; if you change your mind, just let me know.", [-1]); break;
-		case 7: StartFruitMinigame(); break;
+		case 7: NewTextBox(RESOLUTION_H, "I understand; if you change your mind, just let me know.", [-1], spr_fruit_vender_portrait); break;
+		case 6: StartFruitMinigame(); break;
 		default: break;
 	}
 

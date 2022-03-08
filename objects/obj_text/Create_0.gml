@@ -1,14 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x1 = RESOLUTION_W / 2;
-x2 = RESOLUTION_W / 2;
+/// @description Insert description here
+// You can write your code in this editor
 
-x1Target = 0;
-x2Target = RESOLUTION_W;
+timer = 0;
+cutoff = 0;
 
-lerpProgress = 0;
-textProgress = 0;
-background = 0;
+responseSelected = 0;
 
-responseSelected = 0; 
+predictedNLines = -1;
+
+increasedLine = false;
+
+period = 0;
