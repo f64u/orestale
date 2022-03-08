@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function NewTextBox(_x, _y, _msg, _responses){
+function NewTextBox(_y, _msg, _responses){
 	var _obj;
 	if(instance_exists(obj_text)) {
 		_obj = obj_text_queued;
@@ -10,8 +10,10 @@ function NewTextBox(_x, _y, _msg, _responses){
 	
 	
 	
-	with(instance_create_layer(_x, _y, "Instances", _obj)) {
+	with(instance_create_layer(0, 0, "Instances", _obj)) {
 		msg = _msg;
+		pos = _y;
+		
 		if(instance_exists(other)) {
 			originInstance = other.id;
 		} else {

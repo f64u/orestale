@@ -31,6 +31,11 @@ function PlayerStateFree(){
 
 	PlayerCollision();
 	
+	if(keyAttack) {
+		state = PlayerStateAttack;
+		stateAttack = AttackStab;
+	}
+	
 	
 
 	if(keyActivate) {

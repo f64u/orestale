@@ -3,9 +3,11 @@
 function DialogueResponses(response){
 	switch(response) {
 		case 0: break;
-		case 1: NewTextBox(0, 0, "You don't care huh?", [-1]); break;
-		case 2: NewTextBox(0, 0, "How?", ["3\\Look around.", "0\\Idk. you tell me."]); break;
-		case 3: NewTextBox(0, 0, "Will do.", [-1]);
+		case 1: NewTextBox(RESOLUTION_H, "You don't care huh?", [-1]); break;
+		case 2: NewTextBox(RESOLUTION_H, "How?", ["3\\Look around.", "0\\Idk. you tell me."]); break;
+		case 3: NewTextBox(RESOLUTION_H, "Will do.", [-1]); break;
+		case 6: NewTextBox(RESOLUTION_H, "I understand; if you change your mind, just let me know.", [-1]); break;
+		case 7: StartFruitMinigame(); break;
 		default: break;
 	}
 

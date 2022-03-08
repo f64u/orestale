@@ -10,6 +10,6 @@ keyItem = keyboard_check_pressed(vk_control);
 inputDirection = point_direction(0, 0, keyRight - keyLeft, keyDown - keyUp);
 inputMagnitude = (keyRight - keyLeft != 0) || (keyDown - keyUp != 0);
 
-depth = -bbox_bottom;
+depth = -y;
 
 if(!global.gamePaused) script_execute(state);

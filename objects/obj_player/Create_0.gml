@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 state = PlayerStateFree;
+stateAttack = AttackStab;
 lastState = state;
 lastImageSpeed = image_speed;
 
