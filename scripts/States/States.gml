@@ -71,7 +71,7 @@ function FruitGameRunning(){
 
 	}
 	
-	if(thescore >= 5) {
+	if(thescore >= 7) {
 		state = FruitGameWon;
 	}
 	
@@ -108,6 +108,7 @@ function FruitGameWon() {
 	if(!saidGameLostStuff) {
 		saidGameWonStuff = true;
 		global.justWonFruitMinigame = true;
+		global.gotCap = true;
 	}
 	if(!instance_exists(obj_warp)) {
 		WarpPlayerTo(room_marketplace, 434, 160, 1);

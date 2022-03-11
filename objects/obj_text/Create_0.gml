@@ -10,7 +10,5 @@ cutoff = 0;
 responseSelected = 0;
 
 predictedNLines = -1;
-
 increasedLine = false;
 
-period = 0;

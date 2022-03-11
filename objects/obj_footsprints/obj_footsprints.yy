@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"entityActivateScript","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"NewTextBox","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"entityActivateArgs","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"[0, 0, \"Someone has been in here.\", [\"1\\\\Meh..\", \"2\\\\Investigate\"]]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"entityActivateArgs","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"[RESOLUTION_H, \"I wonder whom those belong to.\", [-1] , spr_none]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "GraveyardEnvironment",

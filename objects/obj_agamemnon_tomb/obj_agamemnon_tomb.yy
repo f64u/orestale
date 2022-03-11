@@ -27,7 +27,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"entityActivateScript","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"NewTextBox","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"entityActivateArgs","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"[0, 0, \"Hey Pa!\", [-1]]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"entityActivateArgs","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"[RESOLUTION_H, \"Here lies King of Kings, Leader of Achaians, and King of Argos: \\\\2AGAMEMNON\\\\0.\", [-1], spr_none]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "GraveyardEnvironment",

@@ -2,8 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ScriptExecuteArray(_scr, _args){
 
-	switch (array_length_1d(_args)) {
- 
+	switch (array_length(_args)) {
+	 case 0: return script_execute(_scr);
+	 
 	 case 1: return script_execute(_scr, _args[0]);
  
 	 case 2: return script_execute(_scr, _args[0], _args[1]);

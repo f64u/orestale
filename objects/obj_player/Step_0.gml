@@ -12,4 +12,12 @@ inputMagnitude = (keyRight - keyLeft != 0) || (keyDown - keyUp != 0);
 
 depth = -y;
 
+if(room == room_graveyard) {
+	image_xscale = 1.5;
+	image_yscale = 1.5;
+} else {
+	image_xscale = 1;
+	image_yscale = 1;
+}
+
 if(!global.gamePaused) script_execute(state);
